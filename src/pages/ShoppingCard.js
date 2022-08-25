@@ -106,7 +106,7 @@ const ShoppingCard = ({ card, setCard, setAfterPromoSum, afterPromoSum, setOnlyp
                                     </div>
                                     <div className='shop-infos'>
                                         <span className='shop-nomi'>{item.name}</span>
-                                        <span className='shop-narxi'>{item.skidka_narxi * item.quantity}</span>
+                                        <span className='shop-narxi'>{item.skidka_narxi * item.quantity}</span> 
                                         <div className='shop-btn'>
                                             <button onClick={() => minus(item.id)} className='quantity-btn'>-</button>
                                             <span className='quantity'>{item.quantity}</span>

@@ -85,6 +85,8 @@ const Payment = ({ clientId, setClientId, card, setCard, onlypromo, afterPromoSu
         navigate('/')
         setCard([])
     }
+    const canSave = Boolean(mijoz) && Boolean(manzil) && Boolean(tel)
+
     
     return (
         <div className='container'>
@@ -162,7 +164,7 @@ const Payment = ({ clientId, setClientId, card, setCard, onlypromo, afterPromoSu
                             </InputGroup>
                         </Form.Group>
                         <div className="d-grid gap-2">
-                            <Button className="btn buy-btn mb-3" variant="primary" type='submit' onClick={go}>
+                            <Button className="btn buy-btn mb-3" disabled={!canSave} variant="primary" type='submit' onClick={go}>
                              Buyurtma Berish
                             </Button>
                         
